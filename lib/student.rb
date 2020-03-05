@@ -38,7 +38,6 @@ class Student
     SQL
       DB[:conn].execute(sql, self.name, self.grade)
     end
-  end 
 
   def self.all_students_in_grade_9(grade)
     sql <<-SQL
@@ -79,3 +78,4 @@ class Student
    DB[:conn].execute(sql)
     end
   end
+end 
