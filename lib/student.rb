@@ -48,14 +48,16 @@ class Student
         )
       SQL
         DB[:conn].execute(sql)
-  end
+    end
+  end 
   
   def self.drop_table
     sql = <<-SQL
       DROP TABLE students
       SQL
         DB[:conn].execute(sql)
-  end
+    end
+  end 
 
   def self.all_students_in_grade_9(grade)
     sql <<-SQL
@@ -94,5 +96,6 @@ class Student
       WHERE grade = ?
       SQL
    DB[:conn].execute(sql)
+    end
   end
-end
+end 
